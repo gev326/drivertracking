@@ -1,54 +1,50 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @driver.first_name %>
-</p>
+<h1><%= @driver.full_name %></h1>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @driver.last_name %>
-</p>
+  <table id="show-table" class="table table-bordered">
+<tr>
 
-<p>
+<td>
   <strong>Phone:</strong>
   <%= @driver.phone %>
-</p>
+</td>
 
-<p>
+<td>
   <strong>City:</strong>
   <%= @driver.city %>
-</p>
+</td>
 
-<p>
+<td>
   <strong>State:</strong>
   <%= @driver.state %>
-</p>
+</td>
 
-<p>
+<td>
   <strong>Email:</strong>
   <%= @driver.email %>
-</p>
+</td>
 
-<p>
+<td>
   <strong>Active:</strong>
   <%= @driver.active %>
-</p>
+</td>
 
-<p>
+<td>
   <strong>Load:</strong>
   <%= @driver.load %>
-</p>
+</td>
 
-<p>
+<td>
   <strong>Status:</strong>
   <%= @driver.status %>
-</p>
+</td>
 
-<p>
+<td>
   <strong>Comments:</strong>
   <%= @driver.comments %>
-</p>
-
-<%= link_to 'Edit', edit_driver_path(@driver) %> |
-<%= link_to 'Back', drivers_path %>
+</td>
+   </tbody>
+  </table>
+<%= link_to 'Edit', edit_driver_path(@driver), class: "btn btn-warning" %>
+<%= link_to 'Home', drivers_path, class: "btn btn-primary" %>

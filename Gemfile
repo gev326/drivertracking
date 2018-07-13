@@ -33,6 +33,8 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'bootstrap-form'
 gem 'sprockets', '3.6.3'
+gem 'bootstrap-form'
+gem 'simple_form'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

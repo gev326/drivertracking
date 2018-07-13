@@ -1,29 +1,36 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Drivers</h1>
+<div class="jumbotron jumbotron-home">
 
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Phone</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Email</th>
-      <th>Active</th>
-      <th>Load</th>
-      <th>Status</th>
-      <th>Comments</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        <h1>Driver Tracking</h1>
+
+</div>
+
+
+
+
+<div id = "driv-feed">
+ <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+
+        <th>Driver Name</th>
+        <th>Phone</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Email</th>
+        <th>Active</th>
+        <th>Driver status</th>
+        <th>Company</th>
+        <th>Comments</th>
+        <th> Update Driver</th>
+
+      </tr>
+    </thead>
 
   <tbody>
     <% @drivers.each do |driver| %>
       <tr>
-        <td><%= driver.first_name %></td>
-        <td><%= driver.last_name %></td>
+        <td><%= driver.full_name %></td>
         <td><%= driver.phone %></td>
         <td><%= driver.city %></td>
         <td><%= driver.state %></td>
@@ -32,9 +39,9 @@
         <td><%= driver.load %></td>
         <td><%= driver.status %></td>
         <td><%= driver.comments %></td>
-        <td><%= link_to 'Show', driver %></td>
-        <td><%= link_to 'Edit', edit_driver_path(driver) %></td>
-        <td><%= link_to 'Destroy', driver, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', driver, class: "btn btn-primary" %>
+        <%= link_to 'Edit', edit_driver_path(driver), class: "btn btn-warning btn-group"  %>
+        <%= link_to 'Destroy', driver, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -42,4 +49,3 @@
 
 <br>
 
-<%= link_to 'New Driver', new_driver_path %>
